@@ -1,3 +1,20 @@
-<h1>
-  {{title}}
-</h1>
+<nav class="navbar navbar-light bg-faded">
+  <form class="form-inline float-xs-left" name="githubUserSearchForm">
+    <input class="form-control"
+           type="text"
+           name="userName"
+           placeholder="Github user name"
+           [(ngModel)]="userName">
+    <button class="btn btn-outline-success"
+            type="button"
+            [routerLink]="['users/', userName]">
+      Find user
+    </button>
+  </form>
+</nav>
+
+<div class="row">
+  <div class="col-md-12">
+    <router-outlet></router-outlet>
+  </div>
+</div>
