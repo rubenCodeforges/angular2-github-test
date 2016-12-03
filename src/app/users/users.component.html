@@ -1,1 +1,23 @@
-<h3>User {{ userName }}</h3>
+<div class="row">
+  <div class="col-md-3">
+    <div class="user-info" *ngIf="userModel.user">
+      <a href="{{ userModel.user.url }}">
+        <img class="img-fluid rounder img-thumbnail" height="230" width="230" src="{{ userModel.user.avatar_url }}" alt="">
+      </a>
+      <h3>
+        <span class="full-name">{{ userModel.user.name }}</span>
+        <span class="user-name">{{ userModel.user.login }}</span>
+      </h3>
+    </div>
+  </div>
+  <div class="col-md-9">
+    <div class="col-md-12 followers-list-item" *ngFor="let follower of userModel.followers">
+      <div class="col-md-1">
+        <img class="rounded img-fluid img-thumbnail" src="{{ follower.avatar_url }}" alt="">
+      </div>
+      <div class="col-md-9">
+        <a href="{{ follower.url }}">{{ follower.login }}</a>
+      </div>
+    </div>
+  </div>
+</div>

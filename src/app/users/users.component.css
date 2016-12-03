@@ -1,0 +1,16 @@
+.user-name {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 24px;
+  color: #666;
+  display: block;
+}
+.full-name {
+  font-size: 26px;
+  display: block;
+}
+.followers-list-item {
+  padding: 24px 0;
+  border-bottom: 1px #e5e5e5 solid;
+}

@@ -16,7 +16,7 @@ export class HttpResource {
 
   private static toJsonResponse(response: Response) {
     let body = response.json();
-    return body.data || {};
+    return body || {};
   }
 
 }
