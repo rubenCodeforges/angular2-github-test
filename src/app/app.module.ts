@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import {RouterModule, Routes} from "@angular/router";
 import {UsersComponent} from "./users/users.component";
 import {UsersModule} from "./users/users.module";
+import { NavBarComponent } from './navBar/nav-bar/nav-bar.component';
 
 const appRoutes: Routes = [
   {path: 'users/:userName', component: UsersComponent},
@@ -14,6 +15,7 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
+    NavBarComponent,
   ],
   imports: [
     BrowserModule,
